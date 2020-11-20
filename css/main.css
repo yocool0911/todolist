@@ -2,10 +2,14 @@
 body,html{
     background-image: linear-gradient(to left, #FFA751, #FCB69F);
 }
+@font-face{
 
+ font-family: Noto Sans JP  ;
+  src: url("/font/NotoSansJP-Light.otf");
+}
 .wrapbox{
     background: none;
-  
+    font-family: "Noto Sans JP" ;
 }
 
 select{

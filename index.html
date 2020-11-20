@@ -9,26 +9,26 @@
   </head>
   <body>
     <div class="container" id="app">
-      <div class="card wrapbox">
+      <div class="card wrapbox mt-5">
         <div class="card-header h1 d-flex justify-content-center"> MY TO DO  LIST</div>
         <div class="card-header">
           <div class="input-group">
-            <input class="form-control" type="text"/>
-            <div class="input-group-append"><span class="input-group-text">+</span></div>
-            <select class="ml-5">
+            <input class="form-control" type="text" v-model="newtodo"/>
+            <div class="input-group-append" @click="addtodo"><span class="input-group-text">+</span></div>
+            <select class="ml-5" v-model="visibility">
               <option value="all">全部</option>
               <option value="ing">進行中</option>
               <option value="completed">完成</option>
             </select>
           </div>
         </div>
-        <div class="card-body">
+        <div class="card-body"> 
           <div class="card">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">
+              <li class="list-group-item" v-for="item in filtertodo">
                 <div class="view mt-2">
-                  <label class="ml-2">{{message}}</label>
-                  <input class="float-right" type="checkbox"/>
+                  <label class="ml-2" :for="item.id">{{item.title}}</label><span class="float-right ml-3" @click="removetodo(item)">&times;</span>
+                  <input class="float-right" type="checkbox" :id="item.id" v-model="item.completed"/>
                 </div>
               </li>
             </ul>
