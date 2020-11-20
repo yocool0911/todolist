@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <h1>the first page</h1>
-
-    <script src="js/main.js"></script>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <div class="container">
+      <div class="card wrapbox">
+        <div class="card-header h1 d-flex justify-content-center"> MY TO DO  LIST</div>
+        <div class="card-header">
+          <div class="input-group">
+            <input class="form-control" type="text"/>
+            <div class="input-group-append" @click="addTodo"><span class="input-group-text">+</span></div>
+            <select class="ml-5">
+              <option value="all">全部</option>
+              <option value="ing">進行中</option>
+              <option value="completed">完成</option>
+            </select>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="view mt-2">
+                  <label class="ml-2">第一項</label>
+                  <input class="float-right" type="checkbox"/>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="js/main.js">                                          </script>
+  </head>
+  <body></body>
 </html>

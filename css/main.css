@@ -1,0 +1,19 @@
+
+body,html{
+    background-image: linear-gradient(to left, #FFA751, #FCB69F);
+}
+
+.wrapbox{
+    background: none;
+  
+}
+
+select{
+    padding: 5px;
+}
+.view input{
+    vertical-align: center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
