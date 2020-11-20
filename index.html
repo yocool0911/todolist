@@ -6,13 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/main.css"/>
-    <div class="container">
+  </head>
+  <body>
+    <div class="container" id="app">
       <div class="card wrapbox">
         <div class="card-header h1 d-flex justify-content-center"> MY TO DO  LIST</div>
         <div class="card-header">
           <div class="input-group">
             <input class="form-control" type="text"/>
-            <div class="input-group-append" @click="addTodo"><span class="input-group-text">+</span></div>
+            <div class="input-group-append"><span class="input-group-text">+</span></div>
             <select class="ml-5">
               <option value="all">全部</option>
               <option value="ing">進行中</option>
@@ -25,7 +27,7 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
                 <div class="view mt-2">
-                  <label class="ml-2">第一項</label>
+                  <label class="ml-2">{{message}}</label>
                   <input class="float-right" type="checkbox"/>
                 </div>
               </li>
@@ -35,7 +37,6 @@
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
-    <script src="js/main.js">                                          </script>
-  </head>
-  <body></body>
+    <script src="js/main.js"></script>
+  </body>
 </html>

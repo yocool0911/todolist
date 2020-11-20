@@ -5,26 +5,26 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
         link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous")
-        link(rel="stylesheet", href="css/main.css")
-        .container
-            .card.wrapbox
-                .card-header.h1.d-flex.justify-content-center  MY TO DO  LIST
-                .card-header
-                    .input-group
-                        input.form-control(type="text")
-                        .input-group-append(@click="addTodo")
-                            span.input-group-text +
-                        select.ml-5
-                            option(value="all") 全部
-                            option(value="ing") 進行中
-                            option(value="completed") 完成
-                .card-body
-                    .card
-                        ul.list-group.list-group-flush
-                            li.list-group-item
-                                .view.mt-2
-                                    label.ml-2 第一項
-                                    input(type="checkbox").float-right 
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js")
-        script(src="js/main.js")                                           
+        link(rel="stylesheet", href="css/main.css")                                           
     body
+        .container#app
+            .card.wrapbox
+                    .card-header.h1.d-flex.justify-content-center  MY TO DO  LIST
+                    .card-header
+                        .input-group
+                            input.form-control(type="text")
+                            .input-group-append
+                                span.input-group-text +
+                            select.ml-5
+                                option(value="all") 全部
+                                option(value="ing") 進行中
+                                option(value="completed") 完成
+                    .card-body
+                        .card
+                            ul.list-group.list-group-flush
+                                li.list-group-item
+                                    .view.mt-2
+                                        label.ml-2 {{message}}
+                                        input(type="checkbox").float-right 
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js")
+        script(src="js/main.js")
